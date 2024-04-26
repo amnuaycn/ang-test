@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: test/${{ secrets.IMAGE_TAG }}:${{ github.sha }}
+          tags: ${{ secrets.AZURE_URL }}/${{ secrets.IMAGE_TAG }}:${{ github.sha }}
           file: Dockerfile
